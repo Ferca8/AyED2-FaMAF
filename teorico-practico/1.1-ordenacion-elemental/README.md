@@ -1,5 +1,5 @@
 <h1 align="center">
-  :notebook: Práctico 1.1: Ordenación elemental :notebook:
+  :notebook: Práctico 1.1: "Ordenación elemental" :notebook:
 </h1>
 
 ## Teórico :books:
