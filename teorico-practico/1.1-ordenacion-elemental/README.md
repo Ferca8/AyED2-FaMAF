@@ -2,20 +2,18 @@
 
 <h2 align="center">*Práctico 1.1: Ordenación elemental*</h2>
 
-###**Teórico**
->- ####[Filminas teóricas](...)
+<h3>Teórico</h3>
+
+>- [Filminas teóricas](https://github.com/Ferca8/AyED2-FaMAF/blob/main/teorico-practico/1.1-ordenacion-elemental/teoria-ordenacion-elemental.pdf)
 ***
 
+<h3>Práctico<h3>
 
+>- [Guía de ejercicios y soluciones](https://github.com/Ferca8/AyED2-FaMAF/tree/main/teorico-practico/1.1-ordenacion-elemental/practico)
+
+>- Video: [Ejercicios 1, 2 y 3 (22/03/2021)](https://www.youtube.com/watch?v=uX8j9zXOSDM)
+
+>- Video: [Ejercicios 4, 5 y 8 (29/03/2021)](https://www.youtube.com/watch?v=pd5Y8S7Cuh4)
+
+>- Video: [Ejercicios 8 y 9 (29/03/2021)](https://www.youtube.com/watch?v=mUPKHeDHAUQ)
 ***
-###**Práctico**
->- ####[Guía de ejercicios y soluciones](...)
-***
->- ####Ejercicios 1, 2 y 3 (22/03/2021)
-<p align="center">[<img src="https://img.youtube.com/vi/uX8j9zXOSDM/0.jpg" align="center">](https://www.youtube.com/watch?v=uX8j9zXOSDM)</p>
-***
->- ####Ejercicios 4, 5 y 8 (29/03/2021) 
-<p align="center">[<img src="https://img.youtube.com/vi/pd5Y8S7Cuh4/0.jpg" align="center">](https://www.youtube.com/watch?v=pd5Y8S7Cuh4)</p>
-***
->- ####Ejercicios 8 y 9 (29/03/2021)
-<p align="center">[<img src="https://img.youtube.com/vi/mUPKHeDHAUQ/0.jpg" align="center">](https://www.youtube.com/watch?v=mUPKHeDHAUQ)</p>
