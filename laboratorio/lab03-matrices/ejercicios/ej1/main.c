@@ -7,7 +7,7 @@
 /* Function responsible for dumping or displaying the array. */
 static void dump(char a[], unsigned int length) {
     printf("\"");
-    for (unsigned int j=0u; j < length; j++) {
+    for (unsigned int j = 0u; j < length; j++) {
         printf("%c", a[j]);
     }
     printf("\"");
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     unsigned int length = 0; 
     //  .----------^
     //  :
-    // Debe guardarse aqui la cantidad de elementos leidos del archivo
+    // The number of elements read from the file should be stored here.
     
     length = data_from_file(filepath, indexes, letters, MAX_SIZE);
 

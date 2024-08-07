@@ -1,13 +1,13 @@
-/* First, the standard lib includes, alphabetically ordered */
+/* First, the standard lib includes, alphabetically ordered. */
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Then, this project's includes, alphabetically ordered */
+/* Then, this project's includes, alphabetically ordered. */
 #include "array_helpers.h"
 #include "../stack.h"
 
-/* Maximum allowed length of the array */
+/* Maximum allowed length of the array. */
 static const unsigned int MAX_SIZE = 100u;
 
 void print_help(char *program_name) {
@@ -62,20 +62,20 @@ int* reverse_array_with_stack(int* array, unsigned int length) {
 int main(int argc, char *argv[]) {
   char *filepath = NULL;
 
-  /* parse the filepath given in command line arguments */
+  /* Parse the filepath given in command line arguments. */
   filepath = parse_filepath(argc, argv);
 
-  /* create an array of MAX_SIZE elements */
+  /* Create an array of MAX_SIZE elements. */
   int array[MAX_SIZE];
 
-  /* parse the file to fill the array and obtain the actual length */
+  /* Parse the file to fill the array and obtain the actual length. */
   unsigned int length = array_from_file(array, MAX_SIZE, filepath);
   printf("Original: ");
   array_dump(array, length);
 
   int* new_array = NULL;
 
-  // --- Complete ----
+  // --- COM'LETE ----
   new_array = reverse_array_with_stack(array,length);
   
   printf("Reversed: ");

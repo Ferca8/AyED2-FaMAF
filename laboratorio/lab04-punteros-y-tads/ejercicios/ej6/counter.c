@@ -11,7 +11,7 @@ struct _counter {
 
 counter counter_init(void) {
     counter c = NULL;
-    c = malloc(sizeof(counter)); //sizeof(struct _counter)
+    c = malloc(sizeof(counter)); /* sizeof(struct _counter) */
     c->count = 0;
     return c;
 }
@@ -30,7 +30,7 @@ void counter_inc(counter c) {
 
 
 bool counter_is_init(counter c) {
-    return(c->count == 0); // return(c->count == 0 || c == NULL)
+    return(c->count == 0); /* return(c->count == 0 || c == NULL) */
 }
 /*
     Return whether the counter c has the initial value.
@@ -44,12 +44,12 @@ void counter_dec(counter c) {
 }
 /*
     Decrements the counter c.
-    PRECONDITION: !counter_is_init(c)
+    PRE: !counter_is_init(c)
 */
 
 counter counter_copy(counter c) {
     counter copy = NULL;
-    copy = malloc(sizeof(counter)); //sizeof(struct _counter)
+    copy = malloc(sizeof(counter)); /* sizeof(struct _counter) */
     
     copy->count = c->count;
 

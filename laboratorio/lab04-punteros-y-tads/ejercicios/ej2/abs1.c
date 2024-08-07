@@ -14,22 +14,22 @@ int main(void) {
     
     absolute(a, res);
 
-    printf("El valor absoluto de %d es %d.\n", a, res);
+    printf("The absolute value of %d is %d.\n", a, res);
     return EXIT_SUCCESS;
 }
 /* 
-    Se muestra que el valor absoluto de -10 es 0. Esto claramente no coincide con el lenguaje del teórico pues
-    si bien llama a la función absolute pareciera ser que no trae los valores obtenidos de dicha función y
-    solamente mantiene las asignaciones alojadas en main.
-    La ejecución de abs1 ocurre de la siguiente manera:
-        - Carga de main
-            - Asignaciones
-            - Función absolute
-                Se ejecuta la función absolute y cae dentro de un caso de la guarda, pero al ser void y no retornar
-                nada, el valor se "pierde" por decirlo de una manera. Vuelvo a main. 
-            - Printf
-            - Return
-        - Fin de ejecución de main
+    It is shown that the absolute value of -10 is 0. This clearly does not match the theoretical language because, although it calls 
+    the absolute function, it seems that it does not bring the values obtained from that function and only maintains the assignments located in main.
 
-    Otra forma de explicar la situación (con otras palabras) es que en absolute se usan copias de los parámetros x e y (no los originales).
+    The execution of abs1 occurs as follows:
+        - Load 'main'
+            - Assignments
+            - 'absolute' function
+                The absolute function is executed and falls within a case of the guard, but since it is void and does not return
+                anything, the value is "lost," so to speak. I return to main. 
+            - printf
+            - return
+        - End of 'main' execution
+
+    Another way to explain the situation (in other words) is that absolute uses copies of the parameters x and y (not the originals).
 */

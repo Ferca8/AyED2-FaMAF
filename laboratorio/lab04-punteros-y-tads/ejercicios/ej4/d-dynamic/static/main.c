@@ -1,13 +1,13 @@
-/* First, the standard lib includes, alphabetically ordered */
+/* First, the standard lib includes, alphabetically ordered. */
 #include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Then, this project's includes, alphabetically ordered */
+/* Then, this project's includes, alphabetically ordered. */
 #include "array_helpers.h"
 
-/* Maximum allowed length of the array */
+/* Maximum allowed length of the array. */
 #define MAX_SIZE 100000
 
 void print_help(char *program_name) {
@@ -30,8 +30,7 @@ void print_help(char *program_name) {
 char *parse_filepath(int argc, char *argv[]) {
     /* Parse the filepath given by command line argument. */
     char *result = NULL;
-    // Program takes exactly two arguments
-    // (the program's name itself and the input-filepath)
+    /* Program takes exactly two arguments (the program's name itself and the input-filepath) */
     bool valid_args_count = (argc == 2);
 
     if (!valid_args_count) {

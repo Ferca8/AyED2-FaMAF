@@ -11,7 +11,7 @@ typedef struct _node_t *dict_t;
  */
 
 dict_t dict_empty(void);
-/* Creates an empty dictionary
+/* Creates an empty dictionary.
  *
  * PRE: {true}
  *   dict = dict_empty();
@@ -101,7 +101,7 @@ dict_t dict_destroy(dict_t dict);
  */
 
  key_t dict_min(dict_t dict);
-/* DESC: Returns the smallest element of the dict
+/* DESC: Returns the smallest element of the dict.
  *
  * PRE : {dict --> dict_t && !dict_is_empty(dict)}
  *     min_key = dict_min(dict);

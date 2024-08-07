@@ -15,19 +15,19 @@ dict_t dict_from_file(string filename) {
     char *line = NULL;
     fd = fopen(string_ref(filename), "r");
     if (fd != NULL) {
-        /* filename is a existing file, so create the empty dict */
+        /* filename is a existing file, so create the empty dict. */
         result = dict_empty();
         while (!feof(fd)) {
             line = readline(fd);
             if (line == NULL) {
-                /* this is the case of the last (empty) line */
+                /* This is the case of the last (empty) line. */
                 continue;
             }
             word = strtok(line, ":");
             if (word != NULL) {
                 def = strtok(NULL, "\n");
                 if (def != NULL) {
-                    /* remove extra initial spaces, if any */
+                    /* Remove extra initial spaces, if any. */
                     while (def[0] == ' ') {
                         def = def + 1;
                     }

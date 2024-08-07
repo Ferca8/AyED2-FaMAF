@@ -31,7 +31,6 @@ void array_dump(int a[], unsigned int length) {
     }
 }
 
-
 bool array_is_permutation_of(int a[], int b[], unsigned int length) {
     unsigned int i = 0u;
     bool result = true;

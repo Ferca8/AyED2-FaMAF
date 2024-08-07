@@ -13,8 +13,8 @@
 #include "weather_utils.h"
 
 /**
- * @brief print usage help
- * @param[in] program_name Executable name
+ * @brief print usage help.
+ * @param[in] program_name Executable name.
  */
 void print_help(char *program_name) {
     /* Print the usage help of this program. */
@@ -78,15 +78,15 @@ int main(int argc, char *argv[]) {
     
     /* Storing the historical lowest temperature in a variable 'value_lower_MinTemp' and printing the result. */
     value_lower_MinTemp = lower_MinTemp(array);
-    printf("La menor temperatura mínima histórica registrada en la ciudad de Córdoba es %d°C.\n", value_lower_MinTemp);
+    printf("The lowest historical minimum temperature recorded in the city of Cordoba is %d°C.\n", value_lower_MinTemp);
 
     /* Storing the highest temperature of each year in an array, with one element for each year, and printing it. */
     higher_MaxTemp_per_year(array, array_higher_MaxTemp_per_year);
-    printf("\nEsta es la mayor temperatura máxima registrada por año, desde 1980 a 2016, en la ciudad de Córdoba:\n");
+    printf("\nThis is the highest maximum temperature recorded per year, from 1980 to 2016, in the city of Cordoba:\n");
     dump_MaxTemp(array_higher_MaxTemp_per_year, YEARS);
 
     /* Storing the month with the most precipitation of each year in an array, where each element corresponds to a month and year, and printing it. */
-    printf("\nEstos son los meses de cada año que presentaron la mayor cantidad de precipitaciones en la ciudad de Córdoba:\n");
+    printf("\nThese are the months of each year that had the highest rainfall in the city of Córdoba:\n");
     month_higher_Rainfall_per_year(array, array_month_higher_Rainfall_per_year);
     dump_rainfall(array_month_higher_Rainfall_per_year,YEARS);
 

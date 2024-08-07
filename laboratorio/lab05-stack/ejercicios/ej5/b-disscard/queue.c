@@ -6,7 +6,7 @@
 #include "queue.h"
 
 struct s_queue {
-    unsigned int size;          // Esto se agregó al kickstart
+    unsigned int size;          /* This was added to the kickstart. */
     struct s_node *first;
 };
 
@@ -36,10 +36,10 @@ static bool invrep(queue q) {
 
 queue queue_empty(void) {
     queue q=NULL;
-    q = malloc(sizeof(*q));           // Completado desde acá
+    q = malloc(sizeof(*q));           // Completed from here
                                            //
     q->size = 0;                           //
-    q->first = NULL;                       // Hasta acá
+    q->first = NULL;                       // To here
 
     assert(invrep(q) && queue_is_empty(q));
     return q;
@@ -51,7 +51,7 @@ queue queue_enqueue(queue q, queue_elem e) {
     if (q->first==NULL) {
         q->first = new_node;
     } else {
-        struct s_node* p = q->first;   // Completado desde acá
+        struct s_node* p = q->first;   // Completed from here
                                        //
         while(p->next != NULL) {       //
             p = p->next;               //
@@ -59,7 +59,7 @@ queue queue_enqueue(queue q, queue_elem e) {
                                        //
         p->next = new_node;            // 
     }                                  //
-    q->size++;                         // Hasta acá
+    q->size++;                         // To here
 
     assert(invrep(q) && !queue_is_empty(q));
     return q;
@@ -78,7 +78,7 @@ unsigned int queue_size(queue q) {
     assert(invrep(q));
     unsigned int size=0;
     
-    size = q->size;             // Agregada esta línea para completar queue_size
+    size = q->size;             /* Added this line to complete queue_size */
 
     return size;
 }
@@ -140,4 +140,3 @@ queue queue_destroy(queue q) {
     assert(q == NULL);
     return q;
 }
-

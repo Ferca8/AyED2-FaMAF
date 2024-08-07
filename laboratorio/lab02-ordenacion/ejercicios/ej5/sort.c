@@ -8,9 +8,11 @@
 #include "sort.h"
 #include "fixstring.h"
 
-/* Application of the quick sort algorithm seen in the theoretical class with slight modifications to adapt it to C. 
-It uses the goes_before function as the sorting criterion with a slight modification compared to previous exercises. 
-I make two different implementations: one for quick sort based on alphabetical order (goes_before_alphabetical) and another based on string length (goes_before_bylength). */
+/* 
+    Application of the quick sort algorithm seen in the theoretical class with slight modifications to adapt it to C. 
+    It uses the goes_before function as the sorting criterion with a slight modification compared to previous exercises. 
+    I make two different implementations: one for quick sort based on alphabetical order (goes_before_alphabetical) and another based on string length (goes_before_bylength). 
+*/
 
 // ---------------------------- QUICK SORT ALPHABETICAL ----------------------------
 static unsigned int partition_alphabetical(fixstring a[], unsigned int izq, unsigned int der) {

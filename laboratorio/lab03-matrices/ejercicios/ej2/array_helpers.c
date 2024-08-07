@@ -1,6 +1,6 @@
 /*
   @file array_helpers.d
-  @brief Array Helpers method implementation
+  @brief Array Helpers method implementation.
 */
 #include <assert.h>
 #include <stdbool.h>
@@ -11,11 +11,11 @@
 
 
 /**
- * @brief returns true when reach last line in weather file
- * @param[in] year Year array position (start in 0 ends with YEARS - 1)
- * @param[in] month Month of the year (december is last month 11u)
+ * @brief returns true when reach last line in weather file.
+ * @param[in] year Year array position (start in 0 ends with YEARS - 1).
+ * @param[in] month Month of the year (december is last month 11u).
  * @param[in] day Day of the month. We assume all month have 28 days.
- * @return True when is the last line of the file, False otherwise
+ * @return True when is the last line of the file, False otherwise.
  */
 static bool is_last_line(unsigned int year, unsigned int month, unsigned int day)
 {
@@ -66,29 +66,33 @@ void array_from_file(WeatherTable array, const char *filepath) {
             exit(EXIT_FAILURE);
         }
 
-        /* Initialization of a variable 'weather' of type Weather, a structure defined in weather.h as:
+        /* 
+            Initialization of a variable 'weather' of type Weather, a structure defined in weather.h as:
 
-        typedef struct _weather {
-            int _average_temp; (temperatura media)
-            int _max_temp; (temperatura máxima)
-            int _min_temp; (temperatura mínima)
-            unsigned int _pressure; (presión)
-            unsigned int _moisture; (humedad)
-            unsigned int _rainfall; (precipitaciones)
-        } 
-        Weather; 
+            typedef struct _weather {
+                int _average_temp; (temperatura media)
+                int _max_temp; (temperatura máxima)
+                int _min_temp; (temperatura mínima)
+                unsigned int _pressure; (presión)
+                unsigned int _moisture; (humedad)
+                unsigned int _rainfall; (precipitaciones)
+            } 
+            Weather; 
         
-        Where I store all the respective weather values ​​for the read date. */
+            Where I store all the respective weather values ​​for the read date. 
+        */
         Weather weather = weather_from_file(file);
 
-        /* The parameter 'array' is of type Weathertable[YEARS][MONTHS][DAYS], where:
-                - YEARS = 37, so the indexes used are 0..36.
-                - MONTHS = MONTHS = 12, so the indexes used are 0..11.
-                - DAYS = 28, so the indexes used are 0..27. 
-        Since the year numbers in the file range from 1980 to 2016, I subtract FST_YEAR(1980) to manipulate the indexes from 0 to 36.
-        Since the month numbers in the file range from January(1) to December(12), I subtract 1 to manipulate the indexes from 0 to 11.
-        Since the day numbers in the file range from 1 to 28, I also subtract 1 (or FST_DAY) to manipulate the indexes from 0 to 27.
-        The weather data is assigned to the corresponding position in the array table using the year, month, and day values as indexes. */
+        /* 
+            The parameter 'array' is of type Weathertable[YEARS][MONTHS][DAYS], where:
+                    - YEARS = 37, so the indexes used are 0..36.
+                    - MONTHS = MONTHS = 12, so the indexes used are 0..11.
+                    - DAYS = 28, so the indexes used are 0..27. 
+            Since the year numbers in the file range from 1980 to 2016, I subtract FST_YEAR(1980) to manipulate the indexes from 0 to 36.
+            Since the month numbers in the file range from January(1) to December(12), I subtract 1 to manipulate the indexes from 0 to 11.
+            Since the day numbers in the file range from 1 to 28, I also subtract 1 (or FST_DAY) to manipulate the indexes from 0 to 27.
+            The weather data is assigned to the corresponding position in the array table using the year, month, and day values as indexes. 
+        */
         array[k_year-FST_YEAR][k_month-1][k_day-FST_DAY] = weather;      
     }
 
@@ -97,8 +101,10 @@ void array_from_file(WeatherTable array, const char *filepath) {
 }
 
 // ---------------------------------- PART B: Data analysis ----------------------------------
-/* 'dump_MaxTemp' displays an array whose elements are the maximum temperature of each year from 1980 to 2016. 
-It simply displays the temperature values accompanied by the symbol °C. */
+/* 
+    'dump_MaxTemp' displays an array whose elements are the maximum temperature of each year from 1980 to 2016. 
+    It simply displays the temperature values accompanied by the symbol °C. 
+*/
 void dump_MaxTemp(int a[], unsigned int length) {
     if(length == 0u) {
         printf("[]\n");
@@ -112,9 +118,11 @@ void dump_MaxTemp(int a[], unsigned int length) {
     }
 } 
 
-/* dump_rainfall' displays an array whose elements are the months with the highest rainfall for each year. 
-This function has a slight modification, where based on the value of the element, it is changed to its equivalent month. 
-For example, January is month 1, November is month 11, and so on, respectively. */
+/* 
+    dump_rainfall' displays an array whose elements are the months with the highest rainfall for each year. 
+    This function has a slight modification, where based on the value of the element, it is changed to its equivalent month. 
+    For example, January is month 1, November is month 11, and so on, respectively. 
+*/
 void dump_rainfall(unsigned int a[], unsigned int length) {
     if(length == 0u) {
         printf("[]\n");

@@ -18,7 +18,7 @@ void array_dump(int a[], unsigned int length);
 
 void array_copy(int dst[], int src[], unsigned int length);
 /* 
-   Copy the array 'src' into the array 'dst'. 
+    Copy the array 'src' into the array 'dst'. 
 */
 
 unsigned int array_from_file(int a[], unsigned int max_size, const char *filepath);

@@ -5,11 +5,11 @@
 #include <stdio.h>
 #include "string.h"
 
-/* Key and value, both of type string */
+/* Key and value, both of type string. */
 typedef string key_t;
 typedef string value_t;
 
-/* Rename operations */
+/* Rename operations. */
 #define key_destroy string_destroy
 #define key_eq string_eq
 #define value_eq string_eq

@@ -11,24 +11,24 @@ void absolute(int x, int *y) {
 }
 
 int main(void) {
-    int a = -10, res = 0;  // No modificar esta declaración
-    // --- No se deben declarar variables nuevas ---
+    int a = -10, res = 0;  // Don't modify this declaration
+    // --- No new variables should be declared ---
 
     absolute(a, &res);
 
-    printf("El valor absoluto de %d es %d.\n", a, res);
+    printf("The absolute value of %d is %d.\n", a, res);
 
     assert(res >= 0 && (res == a || res == -a));
     return EXIT_SUCCESS;
 }
 
 /* 
-    Ahora la función sí tiene la funcionalidad del teórico/práctico mediante la utilización de punteros.
-    Al ejecutar absolute ya el valor no se "pierde", si no que queda alojado en una dirección de memoria para
-    luego ser traído al momento de printear los valores, habiendo cambiado el contenido de la variable res.
+    Now the function does have the theoretical/practical functionality through the use of pointers.
+    When executing absolute, the value no longer gets 'lost'; instead, it remains stored at a memory address
+    and is later retrieved when printing the values, having changed the content of the res variable.
 */
 
 /* 
-    2.c) El parámetro int *y de absolute() es de tipo in/out.
+    2.c) The parameter int *y of absolute() is of type in/out.
 */
 

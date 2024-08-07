@@ -1,12 +1,12 @@
-/* First, the standard lib includes, alphabetically ordered */
+/* First, the standard lib includes, alphabetically ordered. */
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Then, this project's includes, alphabetically ordered */
+/* Then, this project's includes, alphabetically ordered. */
 #include "array_helpers.h"
 #include "list.h"
 
-/* Maximum allowed length of the array */
+/* Maximum allowed length of the array. */
 static const unsigned int MAX_SIZE = 100000u;
 
 void print_help(char *program_name) {

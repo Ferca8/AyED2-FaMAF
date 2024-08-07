@@ -23,13 +23,10 @@ int *array_from_file(const char *filepath, size_t *length);
     must contain '<array_length>' amount of elements separated by one or more
     blank characters.
 
-
-
     Returns a pointer to dynamic memory that holds the loaded array (pointer
     must be free by caller).
 
-    The function store in *length the amount of elements of the array
-
+    The function store in *length the amount of elements of the array.
 */
 
 #endif

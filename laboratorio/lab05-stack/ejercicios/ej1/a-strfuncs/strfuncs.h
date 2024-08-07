@@ -5,19 +5,19 @@
 
 size_t string_length(const char *str);
 /*
-    Calcula la longitud de la cadena apuntada por str.
+    Calculate the length of the string pointed to by str.
 */
 
 char *string_filter(const char *str, char c);
 /*
-    Devuelve una nueva cadena en memoria dinámica que se obtiene tomando los caracteres de str
-    que son distintos del caracter c.
+    Returns a new dynamically allocated string that consists of the characters from str 
+    that are different from the character c.
 */
 
 bool string_is_symmetric(const char *str);
 /*
-    Indica si la cadena apuntada por str es simétrica en cuanto que el primer caracter coincide con el
-    último, el segundo con el penúltimo, etc.
+    Indicate if the string pointed to by str is symmetrical in the sense that the first character matches the
+    last, the second matches the second-to-last, and so on.
 */
 
 #endif

@@ -78,11 +78,10 @@ int main(void) {
 }
 
 /*
-    El problema radica en que clon[MAX_LENGTH] es un string local alojado la función 'string_clone()',
-    por lo que está alojado en el Stack y luego de terminar la función este se pierde.
-    Como 'output' es un puntero de tipo char que apunta a la cadena 'clon', una vez termina la función el 
-    arreglo muere y el puntero queda apuntando a una dirección de memoria que ya no almacena dicho string
-    (pues no vive en el Heap, sino en el Stack).
-    La solución es hacer que output sea todavía un puntero de tipo char pero que apunte a memoria dinámica
-    en el Heap, haciendo así que luego de terminar la ejecución de la función el string no muera.
+    The problem is that clon[MAX_LENGTH] is a local string allocated in the function 'string_clone()',
+    meaning it is stored on the stack and is lost after the function completes.
+    Since output is a char pointer pointing to the clon string, once the function ends, the array is destroyed 
+    and the pointer points to a memory location that no longer stores the string (since it resides on the stack, not the heap).
+    The solution is to make output a char pointer that points to dynamically allocated memory on the heap, 
+    ensuring that the string persists after the function execution ends.
 */

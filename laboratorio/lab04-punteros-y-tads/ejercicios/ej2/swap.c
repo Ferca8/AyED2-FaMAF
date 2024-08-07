@@ -20,16 +20,16 @@ int main() {
     x = 6;
     y = 4;
 
-    printf("Los valores originales son (%d,%d).\n", x, y);
+    printf("The original values are (%d,%d).\n", x, y);
 
     swap(x,y);
-    printf("Luego del swap sin punteros queda como (%d,%d).\n", x, y);
+    printf("After the swap WITHOUT pointers, it becomes (%d,%d).\n", x, y);
 
     x = 6;
     y = 4;
 
     swap2(&x,&y);
-    printf("Luego del swap con punteros queda como (%d,%d).\n", x, y);
+    printf("After the swap WITH pointers, it becomes (%d,%d).\n", x, y);
 
     return 0;
 }

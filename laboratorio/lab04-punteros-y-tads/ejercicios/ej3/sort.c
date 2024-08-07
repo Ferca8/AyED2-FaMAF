@@ -1,6 +1,6 @@
 /*
   @file sort.c
-  @brief sort functions implementation
+  @brief sort functions implementation.
 */
 
 #include <assert.h>
@@ -47,7 +47,7 @@ void sort(player_t atp[], unsigned int length) {
 }
 
 /* 
-    CPU time used to sort the array: 0.019496 seconds. (Laboratorio 3, ejercicio 3) 
-    CPU time used to sort the array: 0.006516 seconds. (Laboratorio 4, ejercicio 3)
+    CPU time used to sort the array: 0.019496 seconds (Lab 3, exercise 3).
+    CPU time used to sort the array: 0.006516 seconds (Lab 4, exercise 3).
 */
 

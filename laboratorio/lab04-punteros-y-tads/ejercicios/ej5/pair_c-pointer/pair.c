@@ -12,7 +12,7 @@ pair_t pair_new(int x, int y) {
     return par;
 }
 /*
- * DESC: Creates a new pair with components (x, y)
+ * DESC: Creates a new pair with components (x, y).
  *
  * p = pair_new(x, y);
  *
@@ -23,7 +23,7 @@ int pair_first(pair_t p) {
     return p->fst;
 }
 /*
- * DESC: Returns the first component of p
+ * DESC: Returns the first component of p.
  *
  * PRE: {p --> (x, y)}
  *
@@ -36,7 +36,7 @@ int pair_second(pair_t p) {
     return p->snd;
 }
 /*
- * DESC: Returns the second component of p
+ * DESC: Returns the second component of p.
  *
  * PRE: {p --> (x, y)}
  *
@@ -49,7 +49,7 @@ pair_t pair_swapped(pair_t p) {
     return (pair_new(pair_second(p), pair_first(p)));
 }
 /*
- * DESC: Return a NEW pair with the components of p reversed
+ * DESC: Return a NEW pair with the components of p reversed.
  *
  * PRE: {p --> (x, y)}
  *
@@ -65,6 +65,6 @@ pair_t pair_destroy(pair_t p) {
     return p;
 }
 /*
- * DESC: Free memory if its necesary
+ * DESC: Free memory if its necesary.
  *
  */

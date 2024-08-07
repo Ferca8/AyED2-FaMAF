@@ -10,17 +10,17 @@ void show_pair(pair_t p) {
 
 int main(void) {
     pair_t p, q;
-    // Nuevo par p
+    /* New pair p. */
     p = pair_new(3, 4);
-    // Se muestra el par por pantalla
+    /* The pair is displayed on the screen. */
     printf("p = ");
     show_pair(p);
-    // Nuevo para q con elementos de p intercambiados
+    /* New pair q with elements of p swapped. */
     q = pair_swapped(p);
-    // Se muestra q
+    /* q is displayed. */
     printf("q = ");
     show_pair(q);
-    // Se destruyen p y q
+    /* p and q are destroyed. */
     p = pair_destroy(p);
     q = pair_destroy(q);
     return EXIT_SUCCESS;

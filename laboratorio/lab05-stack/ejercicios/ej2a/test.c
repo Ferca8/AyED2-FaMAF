@@ -5,11 +5,11 @@
 
 int main() {
     printf("- Does stack_pop() work well for size 1 stacks?\n");
-    stack s = stack_empty();    // Create an stack.
-    s = stack_push(s,6);     // Push an element on the stack, making an size 1 stack.
-    s = stack_pop(s);          // Pop the only element of the stack.
+    stack s = stack_empty();    /* Create an stack. */
+    s = stack_push(s,6);     /* Push an element on the stack, making an size 1 stack. */
+    s = stack_pop(s);          /* Pop the only element of the stack. */
 
-    // Check if the stack is indeed null or not.
+    /* Check if the stack is indeed null or not. */
     if(s == NULL) {
         printf("The stack is empty, no problem.\n");
     } else {
@@ -18,9 +18,9 @@ int main() {
     }
 
     printf("\n- If the stack becomes empty, can I reinsert elements?\n");
-    s = stack_push(s,9);    // Use the same stack and push a new element. In theory, s is NULL.
+    s = stack_push(s,9);    /* Use the same stack and push a new element. In theory, s is NULL. */
 
-    // Check if the element was pushed or not.
+    /* Check if the element was pushed or not. */
     if(s != NULL) {
         printf("A new element was successfully pushed into the previously created empty stack without problems.\n");
     } else {
@@ -31,10 +31,10 @@ int main() {
     stack_destroy(s);
     
     printf("\n- Does the stack_to_array() function return NULL for an empty stack?\n");
-    stack q = stack_empty();    // Use the same stack and push a new element. In theory, s is NULL.
+    stack q = stack_empty();    /* Use the same stack and push a new element. In theory, s is NULL. */
     stack_elem* array = stack_to_array(q);
 
-    // Check if the element was pushed or not.
+    /* Check if the element was pushed or not. */
     if(array == NULL) {
         printf("Yes, stack_to_array() return NULL for an empty stack.\n");
     } else {

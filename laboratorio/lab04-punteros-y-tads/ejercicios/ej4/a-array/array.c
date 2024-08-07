@@ -19,13 +19,13 @@ int main(void) {
     int *p = NULL;
     printf("Before: ");
     print_array(arr, ARRAY_SIZE);
-    /* ---------------------------- Reescribir ---------------------------- */
+    /* ---------------------------- REWRITING ---------------------------- */
     //
-    // Se pueden agregar cosas antes del `for` de ser necesario
+    // You can add things before the for loop if necessary.
     //
     for (unsigned int i = 0u; i < ARRAY_SIZE; i++) {
-        p = arr;  // FIXME: Se usa operador &
-        p[i] = 0;       // FIXME: Se usa operador *
+        p = arr;        // FIXME: The operator & is used.
+        p[i] = 0;       // FIXME: The operator * is used.
     }
     /* -------------------------------------------------------------------- */
     printf("After : ");
@@ -33,7 +33,3 @@ int main(void) {
 
     return EXIT_SUCCESS;
 }
-
-/*
-    Los arreglos son 
-*/

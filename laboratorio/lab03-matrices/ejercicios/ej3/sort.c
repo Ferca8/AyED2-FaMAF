@@ -1,6 +1,6 @@
 /*
   @file sort.c
-  @brief sort functions implementation
+  @brief sort functions implementation.
 */
 
 #include <assert.h>
@@ -31,8 +31,8 @@ bool array_is_sorted(player_t atp[], unsigned int length) {
     return (i == length);
 }
 
-/* --------------------------------------- SELECTION SORT --------------------------------------- 
-A slight modification of the selection algorithm shown in lab 2, where it takes arrays of type player_t (a structure defined in player.h) instead of int. */
+// --------------------------------------- SELECTION SORT --------------------------------------- 
+/* A slight modification of the selection algorithm shown in lab 2, where it takes arrays of type player_t (a structure defined in player.h) instead of int. */
 unsigned int min_pos_from_player_atp(player_t atp[], unsigned int i, unsigned int length) {
     unsigned int min_pos = i;
     for (unsigned int j = i + 1; j < length; ++j) {

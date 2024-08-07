@@ -12,7 +12,7 @@ print_data(data_t d) {
 }
 
 void set_name(name_t new_name, data_t *d) {
-    // La norma general es colocar como fin del ciclo al caracter '\0' en lo posible (en vez de NAME_MAXSIZE)
+    /* The general rule is to use the character \0 as the end of the loop whenever possible (instead of NAME_MAXSIZE) */
     for(unsigned int i = 0u; i < NAME_MAXSIZE; i++) {
         (*d).name[i] = new_name[i];
     }
@@ -33,5 +33,5 @@ int main(void) {
 }
 
 /*
-    Implementación del strcpy "a mano".
+    Manual implementation of strcpy.
 */

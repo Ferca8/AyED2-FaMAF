@@ -1,15 +1,15 @@
-/* First, the standard lib includes, alphabetically ordered */
+/* First, the standard lib includes, alphabetically ordered. */
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Then, this project's includes, alphabetically ordered */
+/* Then, this project's includes, alphabetically ordered. */
 #include "array_helpers.h"
 #include "fixstring.h"
 #include "sort_helpers.h"
 #include "sort.h"
 
-/* Maximum allowed length of the array */
+/* Maximum allowed length of the array. */
 static const unsigned int MAX_SIZE = 1000u;
 
 void print_help(char *program_name) {
@@ -59,16 +59,20 @@ int main(int argc, char *argv[]) {
     fixstring copy[MAX_SIZE];
     array_copy(copy, array, length);
 
-    /* Implementation of the quick_sort_alphabetical function, which uses the goes_before_alphabetical function as the sorting criterion, a modification of goes_before from previous exercises. 
-    It shows the sorted array and verifies that it is ordered alphabetically. */
-    printf("Arreglo ordenado alfabéticamente (quick_sort_alphabetical):\n");
+    /* 
+        Implementation of the quick_sort_alphabetical function, which uses the goes_before_alphabetical function as the sorting criterion, a modification of goes_before from previous exercises. 
+        It shows the sorted array and verifies that it is ordered alphabetically. 
+    */
+    printf("Array sorted alphabetically (quick_sort_alphabetical):\n");
     quick_sort_alphabetical(array, length);
     array_dump(array, length);
     assert(array_is_sorted_alphabetical(array, length));
 
-    /* Implementation of the quick_sort_bylength function, which uses the goes_before_bylength function as the sorting criterion, a modification of goes_before from previous exercises. 
-    It shows the sorted array and verifies that it is ordered by length. */
-    printf("\nArreglo ordenado según la longitud de las palabras (quick_sort_bylength):\n");
+    /* 
+        Implementation of the quick_sort_bylength function, which uses the goes_before_bylength function as the sorting criterion, a modification of goes_before from previous exercises. 
+        It shows the sorted array and verifies that it is ordered by length. 
+    */
+    printf("\nArray sorted by word length (quick_sort_bylength):\n");
     quick_sort_bylength(array, length);
     array_dump(array, length);
     assert(array_is_sorted_bylength(array, length));

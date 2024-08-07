@@ -9,7 +9,7 @@ struct s_pair_t {
 
 pair_t pair_new(int x, int y);
 /*
- * DESC: Creates a new pair with components (x, y)
+ * DESC: Creates a new pair with components (x, y).
  *
  * p = pair_new(x, y);
  *
@@ -18,7 +18,7 @@ pair_t pair_new(int x, int y);
 
 int pair_first(pair_t p);
 /*
- * DESC: Returns the first component of p
+ * DESC: Returns the first component of p.
  *
  * PRE: {p --> (x, y)}
  *
@@ -29,7 +29,7 @@ int pair_first(pair_t p);
 
 int pair_second(pair_t p);
 /*
- * DESC: Returns the second component of p
+ * DESC: Returns the second component of p.
  *
  * PRE: {p --> (x, y)}
  *
@@ -40,7 +40,7 @@ int pair_second(pair_t p);
 
 pair_t pair_swapped(pair_t p);
 /*
- * DESC: Return a NEW pair with the components of p reversed
+ * DESC: Return a NEW pair with the components of p reversed.
  *
  * PRE: {p --> (x, y)}
  *
@@ -52,9 +52,8 @@ pair_t pair_swapped(pair_t p);
 
 pair_t pair_destroy(pair_t p);
 /*
- * DESC: Free memory if its necesary
+ * DESC: Free memory if its necesary.
  *
  */
-
 
 #endif

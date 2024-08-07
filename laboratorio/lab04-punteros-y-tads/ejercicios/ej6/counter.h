@@ -3,7 +3,7 @@
 
 #include <stdbool.h>
 
-/* counter as a pointer to structs to guarantee encapsulation */
+/* Counter as a pointer to structs to guarantee encapsulation. */
 typedef struct _counter * counter;
 
 
@@ -29,7 +29,7 @@ bool counter_is_init(counter c);
 void counter_dec(counter c);
 /*
     Decrements the counter c.
-    PRECONDITION: !counter_is_init(c)
+    PRE: !counter_is_init(c)
 */
 
 counter counter_copy(counter c);

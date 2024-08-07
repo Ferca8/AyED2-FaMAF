@@ -20,8 +20,10 @@ bool fstring_eq(fixstring s1, fixstring s2) {
     s1_size = fstring_length(s1);
     s2_size = fstring_length(s2);
 
-    /* If both strings have different lengths, they are clearly different from each other. 
-    In the case where they have the same length, I iterate over both strings, checking that each character is equal in both.*/
+    /* 
+        If both strings have different lengths, they are clearly different from each other. 
+        In the case where they have the same length, I iterate over both strings, checking that each character is equal in both. 
+    */
     if(s1_size != s2_size) {
         is_sorted = false;
     }
@@ -44,7 +46,6 @@ bool fstring_less_eq(fixstring s1, fixstring s2) {
     unsigned int s1_size = fstring_length(s1);
     unsigned int s2_size = fstring_length(s2);
 
-     
     for(unsigned int i = 0; i < s1_size; i++) {
         if(i >= s2_size) {
             return false;

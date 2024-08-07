@@ -18,8 +18,6 @@ bool array_is_sorted_bylength(fixstring array[], unsigned int length);
 /* Checks if the array 'a' is in ascending order. */
 
 void swap(fixstring a[], unsigned int i, unsigned int j);
-/* Exchanges elements of array 'a' in the given positions 'i' and 'j'.
-   Array remains the same if the two positions are the same.
-*/
+/* Exchanges elements of array 'a' in the given positions 'i' and 'j'. Array remains the same if the two positions are the same. */
 
 #endif

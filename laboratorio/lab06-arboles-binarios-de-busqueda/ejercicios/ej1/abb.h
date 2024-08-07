@@ -10,7 +10,7 @@ typedef int abb_elem;
 typedef enum {ABB_IN_ORDER, ABB_PRE_ORDER, ABB_POST_ORDER} abb_ordtype;
 
 abb abb_empty(void);
-/* DESC: Creates an empty tree
+/* DESC: Creates an empty tree.
  *
  * PRE : {true}
  *     tree = abb_empty();
@@ -42,7 +42,7 @@ bool abb_exists(abb tree, abb_elem e);
  */
 
 unsigned int abb_length(abb tree);
-/* DESC: Returns the number of elements in the tree
+/* DESC: Returns the number of elements in the tree.
  *
  * PRE : {tree --> ABB}
  *     length = abb_length(tree);
@@ -51,7 +51,7 @@ unsigned int abb_length(abb tree);
 
 abb abb_remove(abb tree, abb_elem e);
 /* DESC: Removes the given element. If `e` is not in the tree, it does nothing
- *       an returns the tree unchanged
+ *       an returns the tree unchanged.
  *
  * PRE : {tree --> ABB}
  *     tree = abb_remove(tree, e);
@@ -59,7 +59,7 @@ abb abb_remove(abb tree, abb_elem e);
  */
 
 abb_elem abb_root(abb tree);
-/* DESC: Returns the element at the root of the tree
+/* DESC: Returns the element at the root of the tree.
  *
  * PRE : {tree --> ABB && !abb_is_empty(tree)}
  *     root = abb_root(tree);
@@ -67,7 +67,7 @@ abb_elem abb_root(abb tree);
  */
 
 abb_elem abb_max(abb tree);
-/* DESC: Returns the largest element of the tree
+/* DESC: Returns the largest element of the tree.
  *
  * PRE : {tree --> ABB && !abb_is_empty(tree)}
  *     max_e = abb_max(tree);
@@ -75,7 +75,7 @@ abb_elem abb_max(abb tree);
  */
 
 abb_elem abb_min(abb tree);
-/* DESC: Returns the smallest element of the tree
+/* DESC: Returns the smallest element of the tree.
  *
  * PRE : {tree --> ABB && !abb_is_empty(tree)}
  *     min_e = abb_min(tree);

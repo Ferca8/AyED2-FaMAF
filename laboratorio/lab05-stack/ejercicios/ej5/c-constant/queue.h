@@ -10,7 +10,7 @@ typedef int queue_elem;
 
 queue queue_empty(void);
 /*
- * DESC: Creates a new instance of queue
+ * DESC: Creates a new instance of queue.
  *
  * PRE: {true}
  *  q = queue_empty();
@@ -20,7 +20,7 @@ queue queue_empty(void);
 
 queue queue_enqueue(queue q, queue_elem e);
 /*
- * DESC: Adds element 'e' to the queue 'q'
+ * DESC: Adds element 'e' to the queue 'q'.
  *
  * PRE: {q --> queue}
  *  q = queue_enqueue(q, e);
@@ -30,19 +30,19 @@ queue queue_enqueue(queue q, queue_elem e);
 
 bool queue_is_empty(queue q);
 /*
- * DESC: Indicates whether the queue 'q' is empty or not
+ * DESC: Indicates whether the queue 'q' is empty or not.
  *
  */
 
 unsigned int queue_size(queue q);
 /*
- * DESC: Return the number of elements inside the queue 'q'
+ * DESC: Return the number of elements inside the queue 'q'.
  *
  */
 
 queue_elem queue_first(queue q);
 /*
- * DESC: Return the first element of the queue 'q'
+ * DESC: Return the first element of the queue 'q'.
  *
  * PRE: {q --> queue && !queue_is_empty(q)}
  *  e = queue_first(q);
@@ -51,7 +51,7 @@ queue_elem queue_first(queue q);
 
 queue queue_dequeue(queue q);
 /*
- * DESC: Remove the first element of the queue 'q'
+ * DESC: Remove the first element of the queue 'q'.
  *
  * PRE: {q --> queue && !queue_is_empty(q)}
  *  q = queue_dequeue(q);
@@ -61,7 +61,7 @@ queue queue_dequeue(queue q);
 
 queue queue_disscard(queue q, unsigned int n);
 /*
- * DESC: Remove the n-th element of the queue 'q'
+ * DESC: Remove the n-th element of the queue 'q'.
  *
  * PRE: {q --> queue && n < queue_size(q)}
  *  q = queue_disscard(q, n);
@@ -71,7 +71,7 @@ queue queue_disscard(queue q, unsigned int n);
 
 void queue_dump(queue q, FILE *file);
 /*
- * DESC: Dumps content of q in to the file pointed by 'file'
+ * DESC: Dumps content of q in to the file pointed by 'file'.
  *
  * PRE: {q --> queue}
  *  q = queue_dump(q, file);

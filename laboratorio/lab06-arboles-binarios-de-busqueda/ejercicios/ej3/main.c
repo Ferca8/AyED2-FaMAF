@@ -1,10 +1,10 @@
-/* First, the standard lib includes, alphabetically ordered */
+/* First, the standard lib includes, alphabetically ordered. */
 #include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Then, this project's includes, alphabetically ordered */
+/* Then, this project's includes, alphabetically ordered. */
 #include "dict.h"
 #include "dict_helpers.h"
 #include "helpers.h"
@@ -79,12 +79,12 @@ string get_input(const char *message) {
 dict_t on_add(dict_t current) {
     string definition = NULL;
     string word = NULL;
-    word = get_input("Please enter the word to add into the dict");
+    word = get_input("Please enter the word to add into the dict.");
     if (dict_exists(current, word)) {
         printf(RESULT_PREFIX "The word is already in the dict.\n");
         word = string_destroy(word);
     } else {
-        definition = get_input("Please enter the definition");
+        definition = get_input("Please enter the definition.");
         current = dict_add(current, word, definition);
         printf(RESULT_PREFIX "The word and definition were added.\n");
     }
@@ -94,12 +94,12 @@ dict_t on_add(dict_t current) {
 dict_t on_replace(dict_t current) {
     string definition = NULL;
     string word = NULL;
-    word = get_input("Please enter the word to replace in the dict");
+    word = get_input("Please enter the word to replace in the dict.");
     if (!dict_exists(current, word)) {
         printf(RESULT_PREFIX "The word does not exist in the dict.\n");
         word = string_destroy(word);
     } else {
-        definition = get_input("Please enter the new definition");
+        definition = get_input("Please enter the new definition.");
         current = dict_add(current, word, definition);
         printf(RESULT_PREFIX "The definition was replaced.\n");
     }
@@ -108,7 +108,7 @@ dict_t on_replace(dict_t current) {
 
 dict_t on_remove(dict_t current) {
     string word =
-            get_input("Please enter the word to delete from the dict");
+            get_input("Please enter the word to delete from the dict.");
     if (!dict_exists(current, word)) {
         printf(RESULT_PREFIX "The word does not exist in the dict.\n");
     } else {
@@ -121,7 +121,7 @@ dict_t on_remove(dict_t current) {
 
 dict_t on_load(dict_t current) {
     string filename
-            = get_input("Please enter the filename to load the dict from");
+            = get_input("Please enter the filename to load the dict from.");
     dict_t other = dict_from_file(filename);
     if (other == NULL) {
         printf("Can not load dict from filename %s\n", string_ref(filename));
@@ -135,7 +135,7 @@ dict_t on_load(dict_t current) {
 }
 
 void on_dump(dict_t current) {
-    string filename = get_input("Please enter the filename to dump the file");
+    string filename = get_input("Please enter the filename to dump the file.");
     dict_to_file(current, filename);
     filename = string_destroy(filename);
     printf(RESULT_PREFIX "The dictionary was successfully dumped.\n");
@@ -143,17 +143,17 @@ void on_dump(dict_t current) {
 
 dict_t on_empty(dict_t current) {
     current = dict_remove_all(current);
-    printf(RESULT_PREFIX "All words were removed\n");
+    printf(RESULT_PREFIX "All words were removed.\n");
     return (current);
 }
 
 void on_search(dict_t current) {
     string definition = NULL;
     string word = NULL;
-    word = get_input("Please enter the word to search in the dict");
+    word = get_input("Please enter the word to search in the dict.");
     definition = dict_search(current, word);
     if (definition == NULL) {
-        printf(RESULT_PREFIX "The word does not exist in the dict\n");
+        printf(RESULT_PREFIX "The word does not exist in the dict.\n");
     } else {
         printf(RESULT_PREFIX "The definition of \"%s\" is : \"%s\"\n",
                string_ref(word), string_ref(definition));
@@ -162,7 +162,7 @@ void on_search(dict_t current) {
 }
 
 void on_size(dict_t current) {
-    printf(RESULT_PREFIX "The size of the dict is %u\n", dict_length(current));
+    printf(RESULT_PREFIX "The size of the dict is %u.\n", dict_length(current));
 }
 
 int main(void) {

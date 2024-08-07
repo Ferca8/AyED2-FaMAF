@@ -9,7 +9,6 @@ void selection_sort(int a[], unsigned int length);
     will be ascending.
 
     The array 'a' must have exactly 'length' elements.
-
 */
 
 void insertion_sort(int a[], unsigned int length);
@@ -18,7 +17,6 @@ void insertion_sort(int a[], unsigned int length);
     will be ascending according to the goes_before funtion.
 
     The array 'a' must have exactly 'length' elements.
-
 */
 
 void quick_sort(int a[], unsigned int length);
@@ -27,7 +25,6 @@ void quick_sort(int a[], unsigned int length);
     will be ascending according to the goes_before funtion.
 
     The array 'a' must have exactly 'length' elements.
-
 */
 
 #endif

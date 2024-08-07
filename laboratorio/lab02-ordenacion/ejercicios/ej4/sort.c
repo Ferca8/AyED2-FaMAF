@@ -8,8 +8,10 @@
 #include "sort.h"
 
 /* -------------------------------- SELECTION SORT -------------------------------- */
-/* Application of the selection sort algorithm seen in the theoretical class with slight modifications to adapt it to C. 
-It uses the goes_before function as the sorting criterion, arranging the elements from smallest to largest based on their absolute value. */
+/* 
+    Application of the selection sort algorithm seen in the theoretical class with slight modifications to adapt it to C. 
+    It uses the goes_before function as the sorting criterion, arranging the elements from smallest to largest based on their absolute value. 
+*/
 static unsigned int min_pos_from(int a[], unsigned int i, unsigned int length) {
     unsigned int min_pos = i;
     for (unsigned int j = i + 1; j < length; ++j) {
@@ -28,8 +30,10 @@ void selection_sort(int a[], unsigned int length) {
 }
 
 /* -------------------------------- INSERTION SORT -------------------------------- */
-/* Application of the insertion sort algorithm seen in the theoretical class with slight modifications to adapt it to C. 
-It uses the goes_before function as the sorting criterion, arranging the elements from smallest to largest based on their absolute value. */
+/* 
+    Application of the insertion sort algorithm seen in the theoretical class with slight modifications to adapt it to C. 
+    It uses the goes_before function as the sorting criterion, arranging the elements from smallest to largest based on their absolute value. 
+*/
 static void insert(int a[], unsigned int i) {
     unsigned int j = i;
 
@@ -47,8 +51,10 @@ void insertion_sort(int a[], unsigned int length) {
 }
 
 /* -------------------------------- QUICK SORT -------------------------------- */
-/* Application of the quick sort algorithm seen in the theoretical class with slight modifications to adapt it to C. 
-It uses the goes_before function as the sorting criterion, arranging the elements from smallest to largest based on their absolute value. */
+/* 
+    Application of the quick sort algorithm seen in the theoretical class with slight modifications to adapt it to C. 
+    It uses the goes_before function as the sorting criterion, arranging the elements from smallest to largest based on their absolute value. 
+*/
 static unsigned int partition(int a[], unsigned int izq, unsigned int der) {
     unsigned int i,j,pivot;
     pivot = izq;

@@ -1,13 +1,13 @@
 /*
   @file player.h
-  @brief Player structure definition
+  @brief Player structure definition.
 */
 #ifndef _PLAYER_H
 #define _PLAYER_H
 #define MAX_NAME_LENGTH 100u
 #define MAX_COUNTRY_LENGTH 3u 
 
-/** @brief structure used to represent a tennis player position in ranking  */
+/** @brief structure used to represent a tennis player position in ranking.  */
 typedef struct _player_t {
     char name[100];
     char country[4];

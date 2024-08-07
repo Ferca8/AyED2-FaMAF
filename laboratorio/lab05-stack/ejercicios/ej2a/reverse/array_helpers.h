@@ -12,8 +12,7 @@ void array_dump(int a[], unsigned int length);
 unsigned int array_from_file(int a[], unsigned int max_size, const char *filepath);
 /*
     Each element is read from the file located at 'filepath'.
-    The file must exist in disk and must have its contents in the following
-    format:
+    The file must exist in disk and must have its contents in the following format:
 
     <array_length>
     <array_elem_1> <array_elem_2> <array_elem_3> ... <array_elem_N>

@@ -4,7 +4,7 @@
 // ------- Color ANSI codes ---------
 //
 #define ANSI_NOCOLOR "\033[0m"
-// Foreground normal intesity
+// Foreground normal intesity.
 #define ANSI_BLACK "\033[0;30m"
 #define ANSI_RED  "\033[0;31m"
 #define ANSI_GREEN "\033[0;32m"
@@ -13,7 +13,7 @@
 #define ANSI_MAGENTA "\033[0;35m"
 #define ANSI_CYAN "\033[0;36m"
 #define ANSI_WHITE  "\033[0;37m"
-// Foreground high intensity
+// Foreground high intensity.
 #define ANSI_BRBLACK "\033[0;90m"
 #define ANSI_BRRED  "\033[0;91m"
 #define ANSI_BRGREEN "\033[0;92m"
@@ -22,11 +22,11 @@
 #define ANSI_BRMAGENTA "\033[0;95m"
 #define ANSI_BRCYAN "\033[0;96m"
 #define ANSI_BRWHITE  "\033[0;97m"
-// Foreground RGB
+// Foreground RGB.
 #define ANSI_RGB "\033[38;2;%u;%u;%um"
-// Foregroun CUSTOM
+// Foregroun CUSTOM.
 #define ANSI_SUN "\033[38;2;255;255;0m"
-// Background
+// Background.
 #define ANSI_BLACK_BG "\033[0;40m"
 #define ANSI_BLUE_BG "\033[0;44m"
 #define ANSI_GREEN_BG "\033[0;42m"

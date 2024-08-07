@@ -5,9 +5,7 @@
 #include "stack.h"
 #include "hanoi.h"
 
-/*
-    Traigo el stack.c del ejercicio 2.a
-*/
+/* Retrieve stack.c from exercise 2.a. */
 
 static void move(unsigned int current,
         hanoi_t hanoi,
@@ -30,11 +28,12 @@ struct _hanoi {
 hanoi_t hanoi_init(unsigned int disk_count) {
     hanoi_t hanoi = malloc(sizeof(struct _hanoi));
     assert(hanoi != NULL);
-    /*hanoi->aux = stack_empty();
-    hanoi->target = NULL; */
+    /*
+        hanoi->aux = stack_empty();
+        hanoi->target = NULL; 
+    */
     hanoi->aux = stack_empty();
-    hanoi->target = stack_empty();    // Inicializo hanoi->target y hanoi->source (del ciclo de la linea 36)
-    hanoi->source = stack_empty();    // Por lo tanto, se alloca nueva memoria al programa
+    hanoi->target = stack_empty();    /* I initialize hanoi->target and hanoi->source (from the loop on line 36). Therefore, new memory is allocated to the program. */
     hanoi->disk_count = disk_count; 
     
     for (unsigned int i = disk_count; i > 0; --i) {
@@ -55,8 +54,8 @@ void hanoi_print(hanoi_t hanoi) {
 hanoi_t hanoi_destroy(hanoi_t hanoi) {
     assert(hanoi != NULL);
     stack_destroy(hanoi->aux);
-    stack_destroy(hanoi->target);     // Libero hanoi->aux, hanoi->target y hanoi->source, quienes fueron allocadas
-    stack_destroy(hanoi->source);     // en hanoi_init. Así soluciono los memory leaks del ejercicio
+    stack_destroy(hanoi->target);     /* I free hanoi->aux, hanoi->target, and hanoi->source, which were allocated in hanoi_init. This resolves the memory leaks from the exercise. */
+    stack_destroy(hanoi->source);     
     free(hanoi);
     return NULL;
 }

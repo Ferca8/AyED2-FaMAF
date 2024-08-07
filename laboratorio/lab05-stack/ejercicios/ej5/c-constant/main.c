@@ -1,10 +1,10 @@
-/* First, the standard lib includes, alphabetically ordered */
+/* First, the standard lib includes, alphabetically ordered. */
 #include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Then, this project's includes, alphabetically ordered */
+/* Then, this project's includes, alphabetically ordered. */
 #include "queue.h"
 #include "queue_helpers.h"
 
@@ -30,8 +30,7 @@ void print_help(char *program_name) {
 char *parse_filepath(int argc, char *argv[]) {
   /* Parse the filepath given by command line argument. */
   char *result = NULL;
-  // Program takes exactly two arguments
-  // (the program's name itself and the input-filepath)
+  /* Program takes exactly two arguments (the program's name itself and the input-filepath). */
   bool valid_args_count = (argc == 2);
 
   if (!valid_args_count) {
@@ -46,16 +45,16 @@ char *parse_filepath(int argc, char *argv[]) {
 int main(int argc, char *argv[]) {
   char *filepath = NULL;
 
-  /* parse the filepath given in command line arguments */
+  /* Parse the filepath given in command line arguments. */
   filepath = parse_filepath(argc, argv);
 
-  // parse the file and returns the loaded queue
-  queue q = queue_from_file(filepath); // NOTE ALLOCATES MEMORY
+  /* Parse the file and returns the loaded queue. */
+  queue q = queue_from_file(filepath);
 
-  /*dumping the queue */
+  /* Dumping the queue. */
   printf("length: %u\n", queue_size(q));
   queue_dump(q, stdout);
 
-  queue_destroy(q); // NOTE FREES MEMORY
+  queue_destroy(q);
   return EXIT_SUCCESS;
 }

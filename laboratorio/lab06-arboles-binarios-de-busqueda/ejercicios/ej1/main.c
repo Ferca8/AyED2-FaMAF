@@ -1,9 +1,9 @@
-/* First, the standard lib includes, alphabetically ordered */
+/* First, the standard lib includes, alphabetically ordered. */
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "abb.h" /* TAD abb */
+#include "abb.h"  /* TAD abb. */
 
 
 void print_help(char *program_name) {
@@ -62,13 +62,13 @@ abb abb_from_file(const char *filepath) {
 int main(int argc, char *argv[]) {
     char *filepath = NULL;
 
-    /* parse the filepath given in command line arguments */
+    /* Parse the filepath given in command line arguments. */
     filepath = parse_filepath(argc, argv);
 
-    /* parse the file to obtain an abb with the elements */
+    /* Parse the file to obtain an abb with the elements. */
     abb tree = abb_from_file(filepath);
 
-    /*dumping the tree*/
+    /* Dumping the tree. */
     abb_dump(tree, ABB_IN_ORDER);
     if (!abb_is_empty(tree)) {
         printf("\n");
@@ -76,7 +76,7 @@ int main(int argc, char *argv[]) {
                                                        abb_min(tree),
                                                        abb_max(tree));
     } else {
-        printf("\nÁrbol vacío\n");
+        printf("\nÁrbol vacío.\n");
     }
 
     int option = 0;

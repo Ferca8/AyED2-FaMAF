@@ -7,8 +7,10 @@
 #include "sort_helpers.h"
 #include "sort.h"
 
-/* Application of the quick sort algorithm seen in the theoretical class with slight modifications to adapt it to C. 
-In this case, a substantial difference from the theoretical class is the way it sorts partition: here it uses, as in previous exercises, the goes_before function to establish the order. */
+/* 
+    Application of the quick sort algorithm seen in the theoretical class with slight modifications to adapt it to C. 
+    In this case, a substantial difference from the theoretical class is the way it sorts partition: here it uses, as in previous exercises, the goes_before function to establish the order. 
+*/
 static unsigned int partition(int a[], unsigned int izq, unsigned int der) {
     unsigned int i,j,pivot;
     pivot = izq;

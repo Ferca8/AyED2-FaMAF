@@ -37,14 +37,14 @@ queue queue_user_disscard(queue q) {
     int res=0;
     assert(size > 0);
     printf("\n"
-           "Eliminar n-esimo elemento\n"
+           "Delete the n-th element\n"
            "-------------------------\n\n");
     queue_dump(q, stdout);
     do {
-        printf("\nElija un elemento del 0-%u: ", size - 1);
+        printf("\nChoose an element from 0-%u: ", size - 1);
         res=scanf("%u", &disscard);
         if (res != 1 || disscard >= size) {
-            printf("Elemento inválido. Respeta el margen advertido.\n");
+            printf("Invalid element. Respect the advised range.\n");
         }
     } while (disscard >= size);
     if (res==1) {

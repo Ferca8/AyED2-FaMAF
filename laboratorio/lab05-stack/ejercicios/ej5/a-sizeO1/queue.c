@@ -94,7 +94,7 @@ queue queue_dequeue(queue q) {
 
 }
 
-queue queue_disscard(queue q, unsigned int n) {            // Incorporada la función queue_disscard en queue.c
+queue queue_disscard(queue q, unsigned int n) {            /* Added the queue_discard function in queue.c */
     assert(invrep(q) && n < queue_size(q));
 
     if(n == 0) {

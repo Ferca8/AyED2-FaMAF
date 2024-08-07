@@ -3,8 +3,10 @@
 #include <stdbool.h>
 
 char *parse_filepath(int argc, char *argv[]) {
-    /* Parse the filepath given by command line argument. 
-    Brought from exercise 1 of lab 1 with slight modifications (without the print_help function). */
+    /* 
+        Parse the filepath given by command line argument. 
+        Brought from exercise 1 of lab 1 with slight modifications (without the print_help function). 
+    */
     char *result = NULL;
 
     if (argc < 2) {
@@ -29,7 +31,7 @@ unsigned int data_from_file(const char *path,
     registry = fopen(path, "r");
     
     if(path == NULL) {
-    	printf("Error: el archivo no existe.\n");
+    	printf("Error: File does not exist.\n");
     	exit(EXIT_FAILURE);
     }
     
@@ -39,9 +41,9 @@ unsigned int data_from_file(const char *path,
         /* As the elements of the program are read, they are stored in two arrays: one for the indexes and another for the letters that make up the file (including spaces and punctuation marks). */
         fscanf(registry,"%u -> *%c*\n", &indexes[length], &letters[length]);
 
-        /* The indices are checked to ensure they do not exceed the maximum allowed size, in this case, 1000. If they do, the program stops. */
+        /* The indexes are checked to ensure they do not exceed the maximum allowed size, in this case, 1000. If they do, the program stops. */
         if(indexes[length] > max_size)  {
-            printf("Error: El arreglo supera el límite máximo de elementos.\n");
+            printf("Error: The array exceeds the maximum element limit.\n");
             exit(EXIT_FAILURE);
         }
         length++;
@@ -54,8 +56,10 @@ unsigned int data_from_file(const char *path,
 }
 
 void sort(char letters[], unsigned int indexes[], char sorted[], unsigned int lenght) {
-    /* Basically, 'sort' rearranges the letters in the letters[] array and places them in the sorted[] array according to the indices provided in the indexes[] array, going from index 0 to the end. 
-    The values of letters[] array and indexes[] array were reading in 'data_from file' previously. */
+    /* 
+        Basically, 'sort' rearranges the letters in the letters[] array and places them in the sorted[] array according to the indices provided in the indexes[] array, going from index 0 to the end. 
+        The values of letters[] array and indexes[] array were reading in 'data_from file' previously. 
+    */
     for(unsigned int i = 0; i < lenght; i++) {
         sorted[indexes[i]] = letters[i];
     }

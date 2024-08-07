@@ -1,6 +1,6 @@
 /*
   @file array_helpers.h
-  @brief defines array helpers methods. These methods operates over multidimensional (year, month, day) array of weather
+  @brief defines array helpers methods. These methods operates over multidimensional (year, month, day) array of weather.
 */
 #ifndef _ARRAY_HELPERS_H
 #define _ARRAY_HELPERS_H
@@ -24,13 +24,13 @@ typedef Weather WeatherTable [YEARS][MONTHS][DAYS];
 
 /**
  * @brief Write the content of the array 'a' into stdout.
- * @param[in] a array to dump in stdout
+ * @param[in] a array to dump in stdout.
  */
 void array_dump(WeatherTable a);
 
 
 /**
- * @brief reads an array of weather information from file
+ * @brief reads an array of weather information from file.
  * @details
  *
  *  Each element is read from the file located at 'filepath'.
@@ -42,8 +42,8 @@ void array_dump(WeatherTable a);
  *   Those elements are copied into the multidimensional array 'a'.
  *   The dimensions of the array are given by the macro tclimate.
  *
- * @param a array which will contain read file
- * @param filepath file with weather data
+ * @param a array which will contain read file.
+ * @param filepath file with weather data.
  */
 void array_from_file(WeatherTable a, const char *filepath);
 

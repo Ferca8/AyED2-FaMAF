@@ -14,20 +14,18 @@ bool array_is_permutation_of(fixstring a[], fixstring other[], unsigned int leng
 
 void array_dump(fixstring a[], unsigned int length);
 /*
-    Write the content of the array 'a' into stdout. The array 'a' must have
-    exactly 'length' elements.
+    Write the content of the array 'a' into stdout. The array 'a' must have exactly 'length' elements.
 */
 
 void array_copy(fixstring dst[], fixstring src[], unsigned int length);
 /* 
-   Copy the array 'src' into the array 'dst'. 
+    Copy the array 'src' into the array 'dst'. 
 */
 
 unsigned int array_from_file(fixstring a[], unsigned int max_size, const char *filepath);
 /*
     Each element is read from the file located at 'filepath'.
-    The file must exist in disk and must have its contents in the following
-    format:
+    The file must exist in disk and must have its contents in the following format:
 
     <array_length>
     <array_elem_1> <array_elem_2> <array_elem_3> ... <array_elem_N>

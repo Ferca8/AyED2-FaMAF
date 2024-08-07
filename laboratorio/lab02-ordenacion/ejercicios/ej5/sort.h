@@ -10,7 +10,6 @@ void quick_sort_alphabetical(fixstring a[], unsigned int length);
     will be ascending according to the goes_before funtion.
 
     The array 'a' must have exactly 'length' elements.
-
 */
 
 void quick_sort_bylength(fixstring a[], unsigned int length);
@@ -19,7 +18,6 @@ void quick_sort_bylength(fixstring a[], unsigned int length);
     will be ascending according to the goes_before funtion.
 
     The array 'a' must have exactly 'length' elements.
-
 */
 
 #endif

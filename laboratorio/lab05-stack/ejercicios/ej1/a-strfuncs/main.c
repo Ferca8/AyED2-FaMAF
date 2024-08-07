@@ -13,8 +13,8 @@ int main(void) {
     filtered = string_filter(some_str, '.');
     printf("original: '%s' (%ld)\n"
            "filtrada: '%s' (%ld)\n\n"
-           "La cadena '%s' resulta %s simétrica\n"
-           "La cadena '%s' resulta %s simétrica\n",
+           "La cadena '%s' resulta %s simétrica.\n"
+           "La cadena '%s' resulta %s simétrica.\n",
            some_str, string_length(some_str),
            filtered, string_length(filtered),
            some_symmetric,  string_is_symmetric(some_symmetric) ? "ser": "NO ser",

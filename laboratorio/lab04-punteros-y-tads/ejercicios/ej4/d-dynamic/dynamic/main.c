@@ -1,10 +1,10 @@
-/* First, the standard lib includes, alphabetically ordered */
+/* First, the standard lib includes, alphabetically ordered. */
 #include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Then, this project's includes, alphabetically ordered */
+/* Then, this project's includes, alphabetically ordered. */
 #include "array_helpers.h"
 
 void print_help(char *program_name) {
@@ -27,8 +27,7 @@ void print_help(char *program_name) {
 char *parse_filepath(int argc, char *argv[]) {
     /* Parse the filepath given by command line argument. */
     char *result = NULL;
-    // Program takes exactly two arguments
-    // (the program's name itself and the input-filepath)
+    /* Program takes exactly two arguments (the program's name itself and the input-filepath) */
     bool valid_args_count = (argc == 2);
 
     if (!valid_args_count) {
@@ -45,20 +44,19 @@ char *parse_filepath(int argc, char *argv[]) {
 int main(int argc, char *argv[]) {
     char *filepath = NULL;
 
-    /* parse the filepath given in command line arguments */
+    /* Parse the filepath given in command line arguments. */
     filepath = parse_filepath(argc, argv);
     
     size_t length=0;
-    // parse the file and returns the array storing the actual size in <length>
+    /* Parse the file and returns the array storing the actual size in <length>. */
     int *array=array_from_file(filepath, &length);
     
-    /*dumping the array*/
+    /* Dumping the array. */
     array_dump(array, length);
     
-    // 
-    // COMPLETAR: Liberar la memoria usada por <array>
-    //
+    // COMPLETAR: Liberar la memoria usada por <array>.
     free(array);
+    //
     
     return EXIT_SUCCESS;
 }

@@ -62,13 +62,13 @@ int* reverse_array_with_stack(int* array, unsigned int length) {
 int main(int argc, char *argv[]) {
   char *filepath = NULL;
 
-  /* parse the filepath given in command line arguments */
+  /* Parse the filepath given in command line arguments. */
   filepath = parse_filepath(argc, argv);
 
-  /* create an array of MAX_SIZE elements */
+  /* Create an array of MAX_SIZE elements. */
   int array[MAX_SIZE];
 
-  /* parse the file to fill the array and obtain the actual length */
+  /* Parse the file to fill the array and obtain the actual length. */
   unsigned int length = array_from_file(array, MAX_SIZE, filepath);
   printf("Original: ");
   array_dump(array, length);
